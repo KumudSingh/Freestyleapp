@@ -1,0 +1,36 @@
+<mvc:View controllerName="demo.Demo.controller.View1" xmlns:mvc="sap.ui.core.mvc" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<smartFilterBar:SmartFilterBar id="smartFilterBar" considerSelectionVariants="true" persistencyKey="filterLabelCompliance"
+							entitySet="ZZ1_MATERIAL_LEO" search="onSearch" filterChange="onFetch">
+							<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
+						</smartFilterBar:SmartFilterBar>
+						<smartTable:SmartTable id="smartTable" entitySet="ZZ1_MATERIAL_LEO" smartFilterId="smartFilterBar" smartVariant="pageVariantId"
+							tableType="Table" editable="false" useExportToExcel="true" useVariantManagement="true" useTablePersonalisation="true" header="Labels"
+							showRowCount="true" persistencyKey="tableLabelCompliance" showVariantManagement="true" beforeRebindTable="onBeforeRebindTable"
+							class="sapUiResponsiveContentPadding table__mincolwidth" exportType="GW">
+							<Table id="innerUi5Table" growing="false" mode="MultiSelect" itemPress="onItemPress" selectionChange="onSelectionChange" fixedLayout="false">
+								<ColumnListItem highlight="{path:'DBChange', formatter:'.formatRowHighlight'}" type="Navigation" press="onRowSelect"/>
+							</Table>
+							<smartTable:layoutData>
+								<FlexItemData growFactor="1" baseSize="0%"/>
+							</smartTable:layoutData>
+							<smartTable:customToolbar>
+								<OverflowToolbar design="Transparent">
+									<ToolbarSpacer/>
+									<!--	<Button icon="" text="{i18n>setProcessed}" id="setProcessed" press="processEvent"/>
+									<Button icon="" text="{i18n>setUnprocessed}" id="setUnprocessed" press="processEvent"/>
+									<Button icon="" text="{i18n>ackWarning}" id="ackWarning" press="processEvent"/>-->
+								</OverflowToolbar>
+							</smartTable:customToolbar>
+						</smartTable:SmartTable>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

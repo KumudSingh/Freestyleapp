@@ -10,7 +10,7 @@
 							<smartFilterBar:controlConfiguration></smartFilterBar:controlConfiguration>
 						</smartFilterBar:SmartFilterBar>
 						<smartTable:SmartTable id="smartTable" entitySet="ZZ1_MATERIAL_LEO" smartFilterId="smartFilterBar" smartVariant="pageVariantId"
-							tableType="Table" editable="false" useExportToExcel="true" useVariantManagement="true" useTablePersonalisation="true" header="Labels"
+							tableType="Table" editable="false" useExportToExcel="false" useVariantManagement="true" useTablePersonalisation="true" header="Labels"
 							showRowCount="true" persistencyKey="tableLabelCompliance" showVariantManagement="true" beforeRebindTable="onBeforeRebindTable"
 							class="sapUiResponsiveContentPadding table__mincolwidth" exportType="GW">
 							<Table id="innerUi5Table" growing="false" mode="MultiSelect" itemPress="onItemPress" selectionChange="onSelectionChange" fixedLayout="false">
